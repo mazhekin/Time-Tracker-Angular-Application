@@ -23,5 +23,13 @@
     "angular": "1.4",
     "angular-route": "~1.4.3",
     "angular-cookies": "~1.4.3"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }

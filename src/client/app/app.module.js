@@ -4,7 +4,9 @@
     angular.module('app', [
         'app.core',
         'app.auth',
-        'app.shared'
+        'app.shared',
+
+        'app.timer'
     ]);
 
 })();

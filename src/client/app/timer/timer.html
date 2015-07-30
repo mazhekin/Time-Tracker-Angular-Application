@@ -1,0 +1,30 @@
+<div>
+
+    <button ng-click="vm.onTimerClick(vm.counter)" class="btn"
+        ng-class="
+        {
+        'btn-success': vm.counter.status === vm.COUNTER_STATUSES.stopped,
+        'btn-danger': vm.counter.status === vm.COUNTER_STATUSES.started
+        }">
+        <span ng-show="vm.counter.status === vm.COUNTER_STATUSES.stopped">Go</span>
+        <span ng-show="vm.counter.status === vm.COUNTER_STATUSES.started">Stop</span>
+    </button>
+
+</div>
+
+
+{{vm.counter.start}}
+<br />
+{{vm.counter.finish}}
+<br />
+{{vm.counter.diff}}
+
+<!--  -->
+<div>
+Stopped Counters:
+<table>
+    <tr ng-repeat="counter in vm.finishedCounters">
+        <td ng-bind="counter.diff"></td>
+    </tr>
+</table>
+</div>

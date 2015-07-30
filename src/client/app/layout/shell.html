@@ -1,3 +1,16 @@
 <div>
-    shell area
+    <header class="top">
+        <div data-ng-include="'app/layout/header.html'"></div>
+    </header>
+
+    <style>
+        .content { margin-top: 100px; padding-left: 200px; padding-right: 200px; }
+    </style>
+
+    <div class="content">
+        <div data-ng-view></div>
+    </div>
+    <footer style="margin: 15px;">
+        SSSR &copy; 2015
+    </footer>
 </div>
