@@ -6,7 +6,10 @@
         'app.auth',
         'app.shared',
 
-        'app.timer'
+        'app.timer',
+
+        // third party
+        'LocalStorageModule'
     ]);
 
 })();

@@ -10,21 +10,21 @@
         <span ng-show="vm.counter.status === vm.COUNTER_STATUSES.started">Stop</span>
     </button>
 
+    {{vm.counter.diff}}
+
+    <input ng-model="vm.counter.task" />
 </div>
 
 
-{{vm.counter.start}}
-<br />
-{{vm.counter.finish}}
-<br />
-{{vm.counter.diff}}
 
 <!--  -->
-<div>
-Stopped Counters:
+<div style="margin-top:50px;">
 <table>
-    <tr ng-repeat="counter in vm.finishedCounters">
-        <td ng-bind="counter.diff"></td>
+    <tr ng-repeat="counter in vm.finishedCounters track by $index" style="border-top: 1px solid #dcdcdc; padding: 45px;">
+        <td style="padding-right: 10px;"><a href="javascript:void(0)" ng-click="vm.deleteCounter($index)">X</a></td>
+        <td>{{counter.diff}}&nbsp;&nbsp;&nbsp;</td>
+        <td>{{counter.task}}</td>
+
     </tr>
 </table>
 </div>

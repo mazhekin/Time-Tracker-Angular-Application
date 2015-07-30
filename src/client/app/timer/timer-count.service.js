@@ -17,17 +17,18 @@
 
         /////////////////////////////////////////////
 
-        function newCounter() {
+        function newCounter(task) {
             return {
                 start: new Date(),
                 finish: new Date(),
                 status: COUNTER_STATUSES.stopped,
-                diff: 0
+                diff: 0,
+                task: task
             };
         }
 
-        function startCounter() {
-            vm.counter = newCounter();
+        function startCounter(task) {
+            vm.counter = newCounter(task);
             vm.counter.status = COUNTER_STATUSES.started;
             vm.interval = $interval(function() {
                 vm.counter.finish = new Date();
