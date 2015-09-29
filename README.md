@@ -1,6 +1,4 @@
-# Template Application 
-
-##(Starting point for create single page angular application)
+# Angular Application for tracking time intervals 
 
 ## Quick Start
 Clone this repo and run the content locally
